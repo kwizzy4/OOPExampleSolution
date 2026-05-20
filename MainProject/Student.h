@@ -14,12 +14,19 @@ public:
 
 	// default constructor / constructor without arguments
 	Student() {
-		cout << "Student default constructor..." << endl;
+		//cout << "Student default constructor..." << endl;
+		id = 0;
+		name = "";
+		age = 0;
+		mark = 0;
+		class_number = 0;
+		class_letter = '\0';
+		alive = false;
 	}
 
 	string toString() {
 		string s = "Student: ";
-		s += name;
+		s += "Name = " + name;
 		s += ", age = " + to_string(age);
 		s += ", class = " + to_string(class_number) + to_string(class_letter);
 		s += ", mark = " + to_string(mark);
