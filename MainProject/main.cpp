@@ -1,19 +1,19 @@
 #include "Student.h"
 
 int main() {
-	Student st1, st2, st3;
+	Student alex(123, "Alex", 14, 9, 'A', 10, true);
 	
-	Student* ptr = new Student();
+	Student polina(124, "Polina", 14, 9, 'B', 9, true);
 	
-	cout << st1.toString() << endl;
+	Student vlad(alex);
+	Student nikita(alex);
 
-	st1.id = 123;
-	st1.name = "Alex";
-	st1.age = 15;
-	st1.class_number = 9;
-	st1.class_letter = 'A';
-	st1.mark = 10;
-	st1.alive = true;
+	Student* ptr = new Student(123, "Alex", 14, 9, 'A', 10, true);
+
+	cout << alex.toString() << endl;
 	
+	cout << vlad.toString() << endl;
+
+
 	return 0;
 }

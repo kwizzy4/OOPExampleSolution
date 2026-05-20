@@ -24,6 +24,28 @@ public:
 		alive = false;
 	}
 
+	// canonical constructor (constructor with arguments)
+	Student(int i, string nm, int ag, int number, char letter, double mrk, bool a) {
+		id = 0;
+		name = nm;
+		age = ag;
+		class_number = 0;
+		class_letter = '\0';
+		mark = 0;
+		alive = true;
+	}
+
+	// copy-constructor (constructor with arguments)
+	Student(const Student& student) {
+		id = student.id;
+		name = student.name;
+		age = student.age;
+		class_number = student.class_number;
+		class_letter = student.class_letter;
+		mark = student.mark;
+		alive = student.alive;
+	}
+
 	string toString() {
 		string s = "Student: ";
 		s += "Name = " + name;
